@@ -12,4 +12,7 @@ if [ ! -z "$CRON_EXPRESSION" ]; then
 
     # Make environment variables accessible to cron
     printenv > /etc/environment
+
+    # Call crond in the foreground
+    crond -f
 fi
