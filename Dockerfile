@@ -13,4 +13,4 @@ RUN if [ "$TARGETPLATFORM" = "linux/arm/v7" ]; then apk add gcc musl-dev; fi \
 
 ENV IS_DOCKER=1
 WORKDIR /script
-CMD ["tini", "sh", "-c", "/script/setup_cron.sh && crond -f"]
+CMD ["tini", "sh", "-c", "/script/setup_cron.sh"]
